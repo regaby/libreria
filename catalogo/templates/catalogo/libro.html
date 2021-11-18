@@ -1,0 +1,16 @@
+{% extends 'catalogo/base.html' %}
+
+{% block titulo %}{{titulo}}{% endblock %}
+
+{% block contenido %}
+    <h1>{{titulo}}</h1>
+    <h2>{{autor}}</h2>
+    <p>
+    El puntaje de este libro es {{puntaje}}
+    {% if es_bestseller %}
+        y es un best seller.
+    {% else %}
+        no es un best seller.
+    {% endif %}
+    </p>
+{% endblock contenido %}

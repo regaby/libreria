@@ -1,0 +1,16 @@
+{% extends 'catalogo/base.html' %}
+
+{% block titulo %}Catalogo de Libros{% endblock titulo %}
+
+{% block contenido %}
+<ul>
+    {% for libro in libros %}
+        <li><a href="{{libro.get_url}}">{{libro.titulo}} - Puntaje: {{libro.puntaje}}</a></li>
+    {% endfor %}
+</ul>
+<hr>
+<p>El total de libros es: {{total_libros}}</p>
+<p>El puntaje promedio es: {{promedio.puntaje__avg}}</p>
+<p>El puntaje minimo es: {{min.puntaje__min}}</p>
+<p>El puntaje maximo es: {{max.puntaje__max}}</p>
+{% endblock contenido %}
